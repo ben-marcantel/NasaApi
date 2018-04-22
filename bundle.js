@@ -1,12 +1,6 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
-const apiKey = "LrymUck3vCjGus1IRal1AY7Bi8w0hcFYVa6fWNk6";
-
-module.exports = apiKey;
-},{}],2:[function(require,module,exports){
-"use strict";
-
 const $ = require('jquery');
 
 
@@ -23,7 +17,7 @@ module.exports.formatData = ((data) => {
     return asteroidsArray;
 });
 
-},{"jquery":5}],3:[function(require,module,exports){
+},{"jquery":4}],2:[function(require,module,exports){
 "use strict";
 
 const $ = require('jquery');
@@ -61,25 +55,25 @@ $('#submit').on("click", () => {
     });
 });
 
-},{"./dataFormat":2,"./nasaData":4,"./swearFactory":7,"jquery":5}],4:[function(require,module,exports){
+},{"./dataFormat":1,"./nasaData":3,"./swearFactory":6,"jquery":4}],3:[function(require,module,exports){
 "use strict";
 
 const $ = require('jquery');
-const apiKey = require('./apiKey/apiKey');
+// const apiKey = require('./apiKey/apiKey');
 
 
 
 module.exports.getData = (startDate,endDate) => {
     return new Promise( (resolve, reject) => {
       $.ajax({
-        url: `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${apiKey}`
+        url: `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=DEMO_KEY`
       }).done(data => {
         resolve(data.near_earth_objects);
       }).fail( (error) => reject(error));
     });
   };
 
-},{"./apiKey/apiKey":1,"jquery":5}],5:[function(require,module,exports){
+},{"jquery":4}],4:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v3.3.1
  * https://jquery.com/
@@ -10445,7 +10439,7 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{}],6:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 "use strict";
 const $ = require('jquery');
 
@@ -10453,7 +10447,7 @@ const $ = require('jquery');
 module.exports.outputPrint = (fuckOff) => {
     $('#message').append(`<h3 class='messages'>${fuckOff}</h3>`);
 };
-},{"jquery":5}],7:[function(require,module,exports){
+},{"jquery":4}],6:[function(require,module,exports){
 "use strict";
 
 const $ = require('jquery');
@@ -10473,4 +10467,4 @@ module.exports.asteroidResponse = (name, randomNumber) => {
         });
     });
 };
-},{"./output":6,"jquery":5}]},{},[3]);
+},{"./output":5,"jquery":4}]},{},[2]);
