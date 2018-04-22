@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Meteor Tracker</h1>
+    <h3>Please enter a date range below to see which asteroids were near Earth along with a special message.</h3>
+    <div>*Keep date range with seven days, please</div>
+    <input type = "date" id ="start" value="YYYY-MM-DD">
+    <label>Start Date</label>
+    <input type = "date" id = "finish" value="YYYY-MM-DD">
+    <label>End Date</label>
+    <button type="submit" id="submit">get data!</button>
+    <script src="./bundle.js"></script>
+    <div id ="message"></div>
+</body>
+</html>

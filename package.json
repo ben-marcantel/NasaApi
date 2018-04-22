@@ -1,0 +1,24 @@
+{
+  "name": "NasaApi",
+  "version": "1.0.0",
+  "description": "Shake your fist at the sky Practice jQuery and Promises and optionally Handlebars",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ben-marcantel/NasaApi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ben-marcantel/NasaApi/issues"
+  },
+  "homepage": "https://github.com/ben-marcantel/NasaApi#readme",
+  "dependencies": {
+    "browserify": "^16.2.0",
+    "jquery": "^3.3.1"
+  }
+}
